@@ -1,0 +1,16 @@
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+  .content-container {
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .text {
+    width: 100%;
+    margin: 1rem 0;
+  }
+  #upper-nav {
+    width: 100%;
+  }
+}

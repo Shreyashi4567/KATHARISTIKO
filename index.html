@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>KATHARISTIKO</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+      @import url("https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap");
+
+      * {
+        font-family: "Oswald";
+        margin: 0;
+        padding: 0;
+        align-items: center;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        height: 100vh; /* Full height of the viewport */
+        background-color: transparent;
+        background-image: url("Images and Videos/offshore-oil-rig-vast-ocean-overcast-skies-industrial-marine-drilling-platform-energy-extraction-sea.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: white;
+      }
+
+      #upper-nav {
+        background-color: transparent;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        border-radius: 1.5rem;
+        padding: 1rem;
+        width: 50%; /* Adjust width as needed */
+        display: inline-block;
+        margin-top: 2rem;
+      }
+
+      #upper-nav div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      /* Styles for the content */
+      .content {
+        border: 2px solid white;
+        text-align: center;
+        color: white;
+        padding: 20px; /* Padding around the text */
+        background-color: transparent; /* Background color */
+        display: inline-block; /* Center the box */
+        width: 80%; /* Adjust width as needed */
+        max-width: 600px; /* Limit width of content */
+      }
+
+      .about-us {
+        opacity: 0; /* Hidden by default */
+        transform: translateY(50px); /* Start position below */
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Animation effect */
+      }
+
+      .about-us.visible {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Move to original position */
+      }
+
+      /* Container for the text */
+      .content-container {
+        margin-left: 20rem;
+        justify-content: space-between;
+        width: 80%;
+        position: relative;
+      }
+
+      /* Style for the text on both sides */
+      .text {
+        width: 40%;
+        opacity: 0; /* Initially hidden */
+        /* Starting position */
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        /*background-image: linear-gradient(to bottom, #caf0f8, #9cf0cc);*/
+        box-sizing: border-box;
+        border: none;
+        border-radius: 0.6rem;
+        color: #22577a;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      /* Make text visible when it enters the viewport */
+      .text.visible {
+        opacity: 1;
+        transform: translateY(50px);
+      }
+
+      /* Positioning of the text */
+      .text-left {
+        text-align: right;
+        margin-right: 4rem;
+        margin-bottom: 5rem;
+      }
+
+      .text-right {
+        text-align: left;
+        margin-left: 10rem;
+        margin-bottom: 5rem;
+      }
+
+      .testimonial-section {
+        box-sizing: border-box;
+        border: 2px solid black;
+        padding: 1rem;
+        margin-top: 5rem;
+        margin: 1rem;
+        font-family: "Playwrite GB S";
+        transition: opacity 1s ease, transform 0.8s ease;
+      }
+
+      .testimonial-section:hover {
+        transform: translateY(-17px);
+      }
+
+      table {
+        width: 50%;
+        border-collapse: collapse;
+        box-sizing: border-box;
+        border-radius: 2rem;
+      }
+      th,
+      td {
+        border: 2.5px solid #324376;
+        padding: 10px;
+        text-align: center;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+
+      button {
+        background-color: white; /* Initial button color */
+        color: black; /* Button text color */
+        padding: 10px 20px; /* Button padding */
+        font-size: large;
+        border: 2px solid black;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      button:hover {
+        background-color: black;
+        color: white;
+        transform: translateY(-5px);
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="upper-nav">
+      <div id="home">
+        <div style="font-size: 24px; font-weight: bold">Your Logo</div>
+        <ul style="list-style: none; display: flex; margin: 0; padding: 0">
+          <li style="margin-right: 20px">
+            <a href="#home" style="text-decoration: none; color: #333">Home</a>
+          </li>
+          <li style="margin-right: 20px">
+            <a href="#about" style="text-decoration: none; color: #333"
+              >About</a
+            >
+          </li>
+          <li style="margin-right: 20px">
+            <a href="#process" style="text-decoration: none; color: #333"
+              >Process</a
+            >
+          </li>
+          <li>
+            <a href="#contact" style="text-decoration: none; color: #333"
+              >Services</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="content" style="margin: 25vh">
+      <h1 style="font-size: 90px">KATHARISTIKO<br></h1>
+      <hr />
+      <p style="font-size: 24px">One Step Closer to a Cleaner Earth!</p>
+    </div>
+
+    <div class="about-us" id="about">
+      <h1 style="font-size: 48px; margin-top: 2rem; color: rgb(11, 213, 213)">
+        <center>ABOUT US</center>
+      </h1>
+      <p style="padding: 2rem; font-size: 20px">
+        The widespread use of plastics in today's world presents a pressing
+        sustainability challenge: What becomes of these non-biodegradable
+        materials when they are ultimately buried deep in our oceans?<br />
+        We at Katharistiko, aim to provide a new type of material to industries
+        dependent on metal resources: Metal Plastic Composites (MPCs). MPC
+        refers to materials that combine metal and plastic components to
+        leverage the strengths of both. Typically, this involves layers of metal
+        and plastic bonded together, enhancing properties like strength, weight,
+        and corrosion resistance. Not only would MPCs reinforce the industries
+        dependant on metals, it would help in reuse of plastics- emphasizing on
+        plastic present in oceans, as at our company, all plastics used in our
+        MPC production is extracted from the oceans! <br /><br />
+        Under extreme temperatures and pressures, metals found in the seabed
+        combine with these plastic components to create metal-plastic composites
+        (MPCs). Considering the remarkable potential of MPCs and their
+        profitable applications across industries including automotive,
+        aerospace, and construction, we provide the extraction of plastics at a
+        reasonable price. Our Collaboration with b2b Companies considering the
+        increasing demand for
+        <b>lightweight, durable materials</b> fuels market growth.<br /><br />
+        For instance, in the aerospace industry, rockets must endure the intense
+        heat generated during atmospheric re-entry from outer space. They
+        require materials capable of withstanding such extreme conditions to
+        protect both astronauts and the spacecraft's delicate structure. The
+        plastic layers within MPCs not only safeguard the metal from harsh
+        elements but also provide a <b>lighter alternative</b> to pure metal,
+        making them ideal for use in rockets, where weight balance is crucial.
+      </p>
+    </div>
+
+    <h1 style="font-size: 48px; padding-bottom: 2rem; color: rgb(11, 213, 213)">
+      KNOW THE PROCESS
+    </h1>
+    <div>
+      <div id="process">
+        <div class="content-container">
+          <div class="text text-left">
+            <h2>Material Selection:</h2>
+            <p>
+              Choosing appropriate types of metals (like aluminum or steel) and
+              polymers (such as polyethylene or polypropylene).
+            </p>
+          </div>
+          <div class="text text-right">
+            <h2>Surface Preparation:</h2>
+            <p>
+              The metal surfaces are cleaned and often treated to enhance
+              adhesion, such as through sandblasting or chemical etching.
+            </p>
+          </div>
+        </div>
+        <div class="content-container">
+          <div class="text text-left" id="leftText2">
+            <h2>Mixing:</h2>
+            <p>
+              The metal and plastic components are mixed, often using methods
+              like extrusion or injection molding. In some cases, metal powders
+              are combined with a polymer matrix.
+            </p>
+          </div>
+          <div class="text text-right" id="rightText2">
+            <h2>Molding or Shaping:</h2>
+            <p>
+              The mixture is then formed into desired shapes using techniques
+              like compression molding, casting, or 3D printing.
+            </p>
+          </div>
+        </div>
+
+        <div class="content-container">
+          <div class="text text-left" id="leftText3">
+            <h2>Curing or Solidification:</h2>
+            <p>
+              The composite is cured or allowed to cool, depending on the type
+              of polymer used.
+            </p>
+          </div>
+          <div class="text text-right" id="rightText3">
+            <h2>Finishing:</h2>
+            <p>
+              Finally, the composite may undergo machining, sanding, or other
+              finishing processes to achieve the required specifications.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h1 style="font-size: 48px; padding-bottom: 2rem">WHY MPCs?</h1>
+    <!--STARTING OF TABLE DATA-->
+    <p id="data_container"></p>
+
+    <table id="stateTable" style="display: none">
+      <thead>
+        <tr>
+          <th>STATE/UT</th>
+          <th>2016 - 17</th>
+          <th>2017 - 18</th>
+          <th>2018 - 19</th>
+          <th>2019 - 20</th>
+          <th>2020 - 21</th>
+        </tr>
+      </thead>
+      <tbody>
+        <p style="font-size: 20px; text-align: center">
+          Our Objective is to minimize the usage of Single-Use Plastics and
+          coming up with better Eco-Friendly alternative MPCs and to make their
+          usage profitable. The data presented in this table underscores the
+          critical importance of reducing our reliance on single-use plastics,
+          which have become a significant environmental concern today. The
+          alarming figures highlight the urgent need for change in our
+          consumption habits. Embracing alternatives like metal-plastic
+          composites (MPCs) can play a vital role in mitigating plastic waste
+          and promoting sustainability. By adopting these innovative materials,
+          we can significantly contribute to a cleaner and more sustainable
+          future.
+        </p>
+      </tbody>
+      <button id="show_details" style="margin: 2rem">
+        The Amount of Plastic Waste generated in the range 2016-2021 for Andhra
+        Pradesh, Gujarat and Bihar in metric per tonnes
+      </button>
+    </table>
+    <h1 style="font-size: 48px; padding: 2rem">TESTIMONIALS</h1>
+    <div class="testimonials">
+      <div
+        class="testimonial-container"
+        style="display: flex; border: 2px solid black"
+      >
+        <section class="testimonial-section">
+          The composites have also been subjected to tensile loading with
+          different layers of metal mesh, followed by microstructural analysis
+          and comparative studies to serve as a proof of the methodology. 
+        </section>
+        <section class="testimonial-section">
+          High strain composites are another type of high-performance composites
+          that are designed to perform in a high deformation setting and are
+          often used in deployable systems where structural flexing is
+          advantageous.
+        </section>
+        <section class="testimonial-section">The
+          results show that the proposed hybrid process is very effective in
+          producing metal/plastic composites with lower strain values compared
+          to the parent plastic indicating a lower level of deformation due to
+          interlocking of the metal and plastic layers.</section>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("scroll", () => {
+        const aboutSection = document.querySelector(".about-us");
+
+        const aboutPosition = aboutSection.getBoundingClientRect().top;
+        const viewportHeight = window.innerHeight;
+
+        // Trigger animation for "About Us" when less than 200px from the viewport top
+        if (aboutPosition < viewportHeight - 200) {
+          aboutSection.classList.add("visible");
+        } else {
+          aboutSection.classList.remove("visible");
+        }
+      });
+
+      function isScrolledIntoView(element) {
+        const rect = element.getBoundingClientRect();
+        const viewport_Height =
+          window.innerHeight || document.documentElement.clientHeight;
+
+        // Trigger the animation when the top of the element is above the bottom of the viewport
+        return rect.top < viewport_Height && rect.bottom > 0; // Added condition to check if the bottom is above 0
+      }
+
+      // Function to add or remove visibility class when scrolling
+      function checkVisibility() {
+        const textElements = document.querySelectorAll(".text");
+
+        // Toggle 'visible' class based on scroll position
+        textElements.forEach((text) => {
+          if (isScrolledIntoView(text)) {
+            text.classList.add("visible");
+          } else {
+            text.classList.remove("visible"); // Remove class when out of view
+          }
+        });
+
+        // Adjust the height of the vertical line based on scroll position
+        const scrollPosition = window.scrollY || window.pageYOffset;
+        const lineHeight = Math.min(
+          scrollPosition + window.innerHeight,
+          document.body.scrollHeight
+        );
+      }
+
+      // Attach scroll event listener to the window
+      window.addEventListener("scroll", checkVisibility);
+      checkVisibility();
+
+      let URL =
+        "https://api.data.gov.in/resource/f28b147d-3dd4-4ca8-8110-8df19a4eacb7?api-key=579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b&format=json";
+      let button1 = document.getElementById("show_details");
+
+      const getDetails = async () => {
+        let response = await fetch(URL);
+        let data = await response.json();
+
+        // Actual Data Source:
+        let table_data = {
+          records_of_table: [
+            {
+              states_ut: `${data.records[0].states_ut}`,
+              __2016_17: `${data.records[0].__2016_17}`,
+              _2017_18: `74588.5`,
+              _2018_19: ` ${data.records[0]._2018_19}`,
+              _2019_20: `${data.records[0]._2019_20}`,
+              _2020_21: `${data.records[0]._2020_21}`,
+            },
+            {
+              states_ut: `${data.records[3].states_ut}`,
+              __2016_17: `${data.records[3].__2016_17}`,
+              _2017_18: `${data.records[3]._2017_18}`,
+              _2018_19: `${data.records[3]._2018_19}`,
+              _2019_20: `${data.records[3]._2019_20}`,
+              _2020_21: `${data.records[3]._2020_21}`,
+            },
+            {
+              states_ut: `${data.records[6].states_ut}`,
+              __2016_17: `${data.records[6].__2016_17}`,
+              _2017_18: `${data.records[6]._2017_18}`,
+              _2018_19: `${data.records[6]._2018_19}`,
+              _2019_20: `${data.records[6]._2019_20}`,
+              _2020_21: `${data.records[6]._2020_21}`,
+            },
+          ],
+        };
+
+        // Function to display data in the table
+        function displayDataInTable() {
+          const tableBody = document.querySelector("#stateTable tbody");
+
+          tableBody.innerHTML = "";
+
+          table_data.records_of_table.forEach((record) => {
+            const row = document.createElement("tr");
+
+            // Create table cells
+            const stateName = document.createElement("td");
+            stateName.innerText = record.states_ut;
+            row.appendChild(stateName);
+
+            const sixteen_seventeen = document.createElement("td");
+            sixteen_seventeen.innerText = record.__2016_17;
+            row.appendChild(sixteen_seventeen);
+
+            const seventeen_eighteen = document.createElement("td");
+            seventeen_eighteen.innerText = record._2017_18;
+            row.appendChild(seventeen_eighteen);
+
+            const eigtheen_nineteen = document.createElement("td");
+            eigtheen_nineteen.innerText = record._2018_19;
+            row.appendChild(eigtheen_nineteen);
+
+            const nineteen_twenty = document.createElement("td");
+            nineteen_twenty.innerText = record._2019_20;
+            row.appendChild(nineteen_twenty);
+
+            const twenty_one = document.createElement("td");
+            twenty_one.innerText = record._2020_21;
+            row.appendChild(twenty_one);
+
+            // Append the row to the table body
+            tableBody.appendChild(row);
+          });
+          document.getElementById("stateTable").style.display = "table";
+        }
+
+        // Call the function to display the data
+        displayDataInTable();
+      };
+      button1.addEventListener("click", getDetails);
+    </script>
+  </body>
+</html>
