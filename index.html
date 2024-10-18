@@ -25,6 +25,7 @@
         background-color: transparent;
         background-image: url("offshore-oil-rig-vast-ocean-overcast-skies-industrial-marine-drilling-platform-energy-extraction-sea.jpeg");
         background-repeat: no-repeat;
+        z-index: 1;
         background-size: cover;
         background-color: white;
       }
@@ -62,6 +63,8 @@
         opacity: 0; /* Hidden by default */
         transform: translateY(50px); /* Start position below */
         transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Animation effect */
+        min-height: 100vh;
+        z-index: 2;
       }
 
       .about-us.visible {
